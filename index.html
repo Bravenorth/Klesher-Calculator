@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merit and Prison Time Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Merit and Prison Time Calculator</h1>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <!-- Prison Time to Merit -->
+            <div class="calculator">
+                <h2>Prison Time to Merit</h2>
+                <div class="input-group">
+                    <label for="hoursInPrison">Hours of Prison Time:</label>
+                    <input type="number" id="hoursInPrison" placeholder="Enter hours" oninput="calculateMeritFromTime()">
+                </div>
+                <div class="input-group">
+                    <label for="minutesInPrison">Minutes of Prison Time:</label>
+                    <input type="number" id="minutesInPrison" placeholder="Enter minutes" oninput="calculateMeritFromTime()">
+                </div>
+                <p id="meritFromTimeResult"></p>
+            </div>
+
+            <!-- Merits and Minerals Conversion -->
+            <div class="calculator">
+                <h2>Merits and Minerals Conversion</h2>
+                <div class="input-group">
+                    <label for="hadaniteAmount">Amount of Hadanite:</label>
+                    <input type="number" id="hadaniteAmount" placeholder="Enter amount" oninput="calculateTotalMerit()">
+                </div>
+                <div class="input-group">
+                    <label for="dolivineAmount">Amount of Dolivine:</label>
+                    <input type="number" id="dolivineAmount" placeholder="Enter amount" oninput="calculateTotalMerit()">
+                </div>
+                <div class="input-group">
+                    <label for="aphoriteAmount">Amount of Aphorite:</label>
+                    <input type="number" id="aphoriteAmount" placeholder="Enter amount" oninput="calculateTotalMerit()">
+                </div>
+                <p id="totalMeritResult"></p>
+            </div>
+
+            <!-- Minerals Needed for a Given Merit -->
+            <div class="calculator">
+                <h2>Minerals Needed for a Given Merit</h2>
+                <div class="input-group">
+                    <label for="desiredMerit">Desired Merit:</label>
+                    <input type="number" id="desiredMerit" placeholder="Enter merit" oninput="calculateMineralsNeeded()">
+                </div>
+                <p id="mineralsNeededResult"></p>
+            </div>
+
+            <!-- Minerals Needed for a Given Prison Time -->
+            <div class="calculator">
+                <h2>Minerals Needed for a Given Prison Time</h2>
+                <div class="input-group">
+                    <label for="hoursForPrison">Hours of Prison Time:</label>
+                    <input type="number" id="hoursForPrison" placeholder="Enter hours" oninput="calculateMineralsForTime()">
+                </div>
+                <div class="input-group">
+                    <label for="minutesForPrison">Minutes of Prison Time:</label>
+                    <input type="number" id="minutesForPrison" placeholder="Enter minutes" oninput="calculateMineralsForTime()">
+                </div>
+                <p id="mineralsForTimeResult"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Merit Calculator Tool. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
